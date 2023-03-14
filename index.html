@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Electron Video Loop</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    #file-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Electron Video Loop</h1>
+  <span id="file-name"></span>
+  <br>
+  <video id="video-player" width="640" height="480" controls></video>
+  <br>
+  <div id="controls">
+    <button id="select-file">Select Video Files or Folder</button>
+    <button id="keep">Keep</button>
+    <button id="discard">Discard</button>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+
+</html>
